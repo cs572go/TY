@@ -1,0 +1,414 @@
+USE DB;
+
+CREATE TABLE PROJECT(
+    PROJECT_ID INT PRIMARY KEY,
+    PROJ_NAME VARCHAR(40),
+    CHEIF_ARCH VARCHAR(40)
+);
+
+CREATE TABLE EMPLOYEE(
+    EMPLOYEE_ID INT PRIMARY KEY,
+    EMPLOYEE_NAME VARCHAR(40)
+);
+
+CREATE TABLE ASSIGNEDTO(
+    PROJECT_ID INT,
+    EMPLOYEE_ID INT,
+    FOREIGN KEY(EMPLOYEE_ID ) REFERENCES EMPLOYEE(EMPLOYEE_ID),
+    PRIMARY KEY(PROJECT_ID, EMPLOYEE_ID),
+    WORK_HOURS INT
+);
+
+INSERT INTO PROJECT VALUES(
+    1,
+    "C351",
+    "Pennywhistle Cocktoasten"
+);
+
+INSERT INTO PROJECT VALUES(
+    2,
+    "C352",
+    "Worms Pealike"
+);
+
+INSERT INTO PROJECT VALUES(
+    3,
+    "C353",
+    "Pitchfork Ben Pinkerton"
+);
+
+INSERT INTO PROJECT VALUES(
+    4,
+    "C354",
+    "Bad News Splern"
+);
+
+INSERT INTO PROJECT VALUES(
+    5,
+    "C355",
+    "Snoobs Bloominshine"
+);
+
+INSERT INTO PROJECT VALUES(
+    6,
+    "C453",
+    "Joe Pottin Soil Overturf"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    101,
+    "Huckleberry Stevens"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    102,
+    "Scut Turnipseed"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    103,
+    "Sweet Tea Goodpasture"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    104,
+    "Pennywhistle Cocktoasten"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    105,
+    "Lemongrass Gooberdapple"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    106,
+    "Spitzitout Quakenbush"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    107,
+    "Soupcan Sam Fewhairs"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    108,
+    "Stinky Butterbaugh"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    109,
+    "Baby Oil Breedslovetrout"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    110,
+    "Foncy Goodpasture"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    111,
+    "Chigger Wimplesnatch"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    112,
+    "Mr Peabody Swackhamer"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    113,
+    "Joe Pottin Soil Overturf"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    114,
+    "Squids Bloominshine"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    115,
+    "Snoobs Bloominshine"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    116,
+    "Huckleberry Whipkey"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    117,
+    "Snakes Oxhandler"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    118,
+    "Cinnabuns Jefferson"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    119,
+    "Winston Jazz Hands Porkins"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    120,
+    "Bad News Splern"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    121,
+    "Old Scratch Jenkins"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    122,
+    "Worms Pealike"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    123,
+    "Pitchfork Ben Pinkerton"
+);
+
+INSERT INTO EMPLOYEE VALUES(
+    124,
+    "Johnny Olivetti"
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    4,
+    101,
+    9
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    4,
+    102,
+    15
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    5,
+    103,
+    16
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    1,
+    104,
+    11
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    2,
+    105,
+    17
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    2,
+    106,
+    7
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    5,
+    107,
+    6
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    4,
+    108,
+    4
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    5,
+    109,
+    20
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    5,
+    110,
+    20
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    4,
+    111,
+    3
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    5,
+    112,
+    19
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    6,
+    113,
+    19
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    4,
+    114,
+    8
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    5,
+    115,
+    18
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    2,
+    116,
+    6
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    2,
+    117,
+    13
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    4,
+    118,
+    17
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    1,
+    119,
+    20
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    4,
+    120,
+    16
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    2,
+    121,
+    12
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    2,
+    122,
+    4
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    3,
+    123,
+    18
+);
+
+INSERT INTO ASSIGNEDTO VALUES(
+    3,
+    124,
+    1
+);
+
+SELECT
+    E.*
+FROM
+    EMPLOYEE AS E
+    JOIN ASSIGNED_TOO AS A
+    ON E.EMPLOYEE_ID=A.EMPLOYEE_ID
+WHERE
+    A.PROJECT_ID=353;
+
+SELECT
+    EMPLOYEE_ID
+FROM
+    ASSIGNED_TOO
+WHERE
+    PROJECT_ID=353;
+
+SELECT
+    E.*
+FROM
+    EMPLOYEE AS E
+    JOIN ASSIGNED_TOO AS A
+    ON E.EMPLOYEE_ID=A.EMPLOYEE_ID
+WHERE
+    A.PROJECT_ID=(
+        SELECT
+            PROJECT_ID
+        FROM
+            PROJECT
+        WHERE
+            PROJ_NAME="Database"
+    );
+
+SELECT
+    E.*
+FROM
+    EMPLOYEE AS E
+    JOIN ASSIGNED_TOO AS A
+    ON E.EMPLOYEE_ID=A.EMPLOYEE_ID
+WHERE
+    A.EMPLOYEE_ID IN (
+        SELECT
+            DISTINCT A.EMPLOYEE_ID
+        FROM
+            EMPLOYEE E
+            JOIN ASSIGNED_TOO A
+            ON E.EMPLOYEE_ID=A.EMPLOYEE_ID
+        WHERE
+            A.PROJECT_ID=353
+    )
+    AND A.PROJECT_ID=354;
+
+SELECT
+    DISTINCT E.*
+FROM
+    EMPLOYEE AS E
+    JOIN ASSIGNED_TOO AS A
+    ON E.EMPLOYEE_ID=A.EMPLOYEE_ID
+WHERE
+    A.PROJECT_ID!=453;
+
+SELECT
+    *
+FROM
+    EMPLOYEE
+WHERE
+    EMPLOYEE_NAME LIKE "s%";
+
+SELECT
+    *
+FROM
+    PROJECT
+WHERE
+    CHEIF_ARCH="smith";
+
+DELETE FROM PROJECT
+WHERE
+    PROJ_NAME="DBMS";
+
+SELECT
+    PROJECT_ID
+FROM
+    ASSIGNED_TOO
+WHERE
+    EMPLOYEE_ID=101;
+
+CREATE VIEW EMPL_PROJ AS (
+    SELECT DISTINCT E.* FROM EMPLOYEE AS E JOIN ASSIGNED_TOO AS A ON E.EMPLOYEE_ID=A.EMPLOYEE_ID WHERE A.PROJECT_ID!=453
+);
+
+SELECT
+    *
+FROM
+    EMPL_PROJ;

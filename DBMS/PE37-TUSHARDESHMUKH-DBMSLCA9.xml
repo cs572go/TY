@@ -1,0 +1,13 @@
+for $x in doc('/book.xml')/bookstore/book
+where $x/price>30
+return $x/title
+
+
+for $x in doc('/book.xml')/bookstore/book
+where $x/price>30
+order by $x/title
+return $x/title 
+
+
+for $x at $i in doc('/book.xml')/bookstore/book/title
+return <book>{$i}. {data($x)}</book> 
