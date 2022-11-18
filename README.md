@@ -1,2 +1,2 @@
 # TY
-TY Labs, Projects
+TY stuff
