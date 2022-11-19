@@ -1,149 +1,172 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <!-- Required meta tags -->
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="app.css">
-
-    <title>Museum of Candy</title>
-</head>
-
-<body>
-    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
-        <a href="#" class="navbar-brand">CANDY</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-custom navbar-dark fixed-top" id="top">
+        <div class="container">
+          <a class="navbar-brand navbar-text" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navLinks">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="" class="nav-link">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">ABOUT</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">TICKETS</a>
-                </li>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about-us">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
             </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
+    <div class="container home-el">
+        <h1 class="custom-h1">Landing Page</h1>
+        <p class="custom-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br> Quo aut mollitia, ad explicabo repellendus quae facere?</p>
+        <a href="#about-us"><button type="button" class="btn btn-primary btn-lg center-pos">About Us</button></a>
+    </div>
 
-    <section class="container-fluid px-0">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div id="headingGroup" class="text-white text-center d-none d-lg-block mt-5">
-                    <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
-                    <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
-                    <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
-                    <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
-                    <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
-                    <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
-                    <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h1>
+
+    
+    <div class="container" id="about-us">
+        <div class="about-section">
+            <h2 class="text-center">About Us</h2>
+            <div class="row text-center abt-dtl">
+                <div class="col-md-6 set-img">
+                    <img src="assets/img/about_test.png" width="350px">
+                </div>
+                <div class="col-md-6">
+                    <p class="pg-abt">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem eligendi repudiandae minima odit aperiam expedita hic aut a, sit et accusamus dolorum cupiditate fugit totam deleniti at amet maxime, officiis reprehenderit eos. Sed accusamus facere alias repudiandae quasi vel maxime animi iste voluptas illum eos veniam dolore nihil officiis dolorem sint fugiat, minima exercitationem quia mollitia, in quas beatae! Dicta debitis minima doloribus ea repellendus voluptates, cupiditate officiis hic neque quae odit quidem cum nam? Odit nemo cumque ex veniam.</p>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <img class="img-fluid" src="imgs/hand2.png" alt="">
-            </div>
         </div>
-    </section>
+    </div>
 
-    <section class="container-fluid px-0">
-        <div class="row align-items-center content">
-            <div class="col-md-6 order-2 order-md-1">
-                <img src="imgs/milk.png" alt="" class="img-fluid">
-            </div>
-            <div class="col-md-6 text-center order-1 order-md-2">
-                <div class="row justify-content-center">
-                    <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
-                        <h2>MUSEUM OF CANDY</h2>
-                        <img src="imgs/lolli_icon.png" alt="" class="d-none d-lg-inline">
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
-                            beatae, maiores deserunt
-                            in voluptatibus
-                            aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur
-                            repellat eveniet quidem
-                            voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam
-                            autem nam ex deserunt debitis
-                            eaque ratione! Nobis, quidem assumenda.</p>
+ 
+    <div class="container" id="pricing">
+        <div class="str-bs">
+            <h2 class="text-center">Pricing</h2>
+            <div class="container-fluid">
+                <div class="container p-5">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-12 mb-4">
+                      <div class="card card1 h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">Basic</h5>
+                          <small class='text-muted'>Individual</small>
+                          <br><br>
+                          <span class="h2">$8</span>/month
+                          <br><br>
+                          <div class="d-grid my-3">
+                            <a href="#"><button class="btn btn-outline-dark btn-block">Select this plan</button></a>
+                          </div>
+                          <ul>
+                            <li>Cras justo odio</li>
+                            <li>Dapibus ac facilisis in</li>
+                            <li>Vestibulum at eros</li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="row align-items-center content">
-            <div class="col-md-6 text-center">
-                <div class="row justify-content-center">
-                    <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
-                        <h2>MUSEUM OF CANDY</h2>
-                        <img src="imgs/lolli_icon.png" alt="" class="d-none d-lg-inline">
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
-                            beatae, maiores deserunt
-                            in voluptatibus
-                            aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur
-                            repellat eveniet quidem
-                            voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam
-                            autem nam ex deserunt debitis
-                            eaque ratione! Nobis, quidem assumenda.</p>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                      <div class="card card2 h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">Standard</h5>
+                          <small class='text-muted'>Small Business</small>
+                          <br><br>
+                          <span class="h2">$20</span>/month
+                          <br><br>
+                          <div class="d-grid my-3">
+                            <a href="#"><button class="btn btn-outline-dark btn-block">Select this plan</button></a>
+                          </div>
+                          <ul>
+                            <li>Cras justo odio</li>
+                            <li>Dapibus ac facilisis in</li>
+                            <li>Vestibulum at eros</li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <img src="imgs/gumball.png" alt="" class="img-fluid">
-            </div>
-        </div>
-        <div class="row align-items-center content">
-            <div class="col-md-6 order-2 order-md-1">
-                <img src="imgs/sprinkles.png" alt="" class="img-fluid">
-            </div>
-            <div class="col-md-6 text-center order-1 order-md-2">
-                <div class="row justify-content-center">
-                    <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
-                        <h2>MUSEUM OF CANDY</h2>
-                        <img src="imgs/lolli_icon.png" alt="" class="d-none d-lg-inline">
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
-                            beatae, maiores
-                            deserunt
-                            in voluptatibus
-                            aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur
-                            repellat eveniet
-                            quidem
-                            voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam
-                            autem nam ex deserunt
-                            debitis
-                            eaque ratione! Nobis, quidem assumenda.</p>
+                    <div class="col-lg-4 col-md-12 mb-4">
+                      <div class="card card3 h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">Premium</h5>
+                          <small class='text-muted'>Large Company</small>
+                          <br><br>
+                          <span class="h2">$40</span>/month
+                          <br><br>
+                          <div class="d-grid my-3">
+                            <a href="#"><button class="btn btn-outline-dark btn-block">Select this plan</button></a>
+                          </div>
+                          <ul>
+                            <li>Cras justo odio</li>
+                            <li>Dapibus ac facilisis in</li>
+                            <li>Vestibulum at eros</li>
+                          </ul>
+                        </div>
+                        </div>
                     </div>
-                </div>
+                </div>    
             </div>
         </div>
-    </section>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    </div>
+    </div>
 
-    <script>
-        $(function () {
-            $(document).scroll(function () {
-                var $nav = $("#mainNavbar");
-                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-            });
-        });
-    </script>
-</body>
 
+
+    <div class="container">
+        <div class="contact-pg" id="contact">
+            <h2 class="text-center">Contact</h2>
+            <div class="container py-4">
+                <form id="contactForm">
+                  <div class="mb-3">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+                    <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="emailAddress">Email Address</label>
+                    <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                    <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
+                    <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                  </div>
+                  <div class="d-none" id="submitSuccessMessage">
+                    <div class="text-center mb-3">Form submission successful!</div>
+                  </div>
+                  <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Error sending message!</div>
+                  </div>
+                  <div class="d-grid">
+                    <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                  </div>
+                </form>
+              </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-lg-start">
+        <div class="text-center pt-2 pb-1 lt-footer">
+          <p class="lt-footer">&copy; Tushar Deshmukh 1032201698 </p>
+        </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
 </html>
